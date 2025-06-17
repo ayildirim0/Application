@@ -64,10 +64,11 @@ namespace HelloWord
                 Console.WriteLine("ikinci ürünün fiyatı rakamdan olusur :");
                 return;// girse uygulama return ile sonlandırılıyor
             }
-            int toplam = int.Parse(ilkUrun) + int.Parse(ikinciUrun);
+            double toplam = int.Parse(ilkUrun) + int.Parse(ikinciUrun);
+            double yuzde = toplam * 0.10;
             Console.WriteLine($"\n{Tc} Tc numaralı {name} isimli kişi icin kayıt olusmustur.");
             Console.WriteLine($"{numara} Telefon numarasına bildirim mesaji göndermiştir.");
-            Console.WriteLine($"{toplam} Toplam harcama karşılıgı kazanılan %10 patika puan miktari -> 55 TL dir.");
+            Console.WriteLine($"{toplam} Toplam harcama karşılıgı kazanılan %10 patika puan miktari -> {yuzde} TL dir.");
         }
        static bool kontrol(string text) // metot yazdım  string degişkeninin icindeki degeri bakıp
                                          // icinde harf veya özel karekter varmı varsa true yoksa false donecek.
